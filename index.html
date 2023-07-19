@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChotaURL - URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>ChotaURL - URL Shortener</h1>
+    </header>
+    <nav>
+        <a href="create-account.html">Create User Account</a>
+        <a href="index.html">Create Short URL</a>
+        <a href="get-original-url.html">Get Original URL</a>
+    </nav>
+    <main>
+        <h2>Create Short URL</h2>
+        <form action="create-short-url.html" method="POST">
+            <label for="long-url">Long URL:</label>
+            <input type="url" id="long-url" name="long-url" required>
+
+            <label for="scope">Scope:</label>
+            <select id="scope" onchange="toggleUsernameInput()">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+
+            <label for="access-username">Username (Private Scope Only):</label>
+            <input type="text" id="access-username" name="access-username">
+
+            <input type="submit" value="Create Short URL">
+        </form>
+    </main>
+</body>
+
+</html>
